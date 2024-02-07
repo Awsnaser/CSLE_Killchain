@@ -1,0 +1,25 @@
+
+Summarized Instructions for User 'aws' Setup:
+
+1. Create Required Directories:
+   - PID files: sudo mkdir /var/log/csle && sudo chmod -R u+rw /var/log/csle && sudo chown -R aws /var/log/csle
+   - Log files: sudo mkdir /tmp/csle && sudo chmod -R u+rw /tmp/csle && sudo chown -R aws /tmp/csle
+
+2. Update Sudoers for Password-less Service Management:
+   - Execute: sudo visudo
+   - Append: aws ALL = NOPASSWD: /usr/sbin/service docker stop, /usr/sbin/service docker start, ...
+
+3. Setup SSH Keys for Password-less Access:
+   - Generate SSH keys: ssh-keygen (press Enter to all prompts)
+   - Authorize key: cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys && chmod 700 ~/.ssh ...
+
+4. Change PostgreSQL Log Directory Ownership:
+   - Execute: sudo chown -R aws /var/log/postgresql
+
+5. Clone Required Repository from GitHub:
+   - Navigate: cd /path/to/directory
+   - Clone: git clone https://github.com/user/repository.git
+
+6. Post-Clone Configuration:
+   - Navigate to cloned repository: cd repository
+   - Follow setup instructions in README.
