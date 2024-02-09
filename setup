@@ -11,9 +11,7 @@ source ~/.bashrc
 git clone https://github.com/Limmen/csle
 conda create -n csle python=3.9
 conda activate csle
-source activate py39
 
-pip install torch numpy gym docker paramiko stable-baselines3 psycopg2 pyglet flask click waitress scp psutil grpcio grpcio-tools scipy confluent-kafka requests pyopenssl sphinx mypy mypy-extensions mypy-protobuf types-PyYAML types-protobuf types-paramiko types-requests types-urllib3 flake8 pytest gevent eventlet dnspython csle-ryu-fork gpytorch pulp Bayesian-optimization emukit cma pycryptodome
 
 
 
@@ -50,6 +48,12 @@ psql> \password postgres # set postgres password
 
 
 
+sudo apt-get install build-essential libpq-dev
+pip install torch numpy gym docker paramiko stable-baselines3 psycopg2 pyglet flask click waitress scp psutil grpcio grpcio-tools scipy confluent-kafka requests pyopenssl sphinx mypy mypy-extensions mypy-protobuf types-PyYAML types-protobuf types-paramiko types-requests types-urllib3 flake8 pytest gevent eventlet dnspython csle-ryu-fork gpytorch pulp Bayesian-optimization emukit cma pycryptodome
+
+
+
+
 pg_hba conf. 
 local   all             postgres                             trust
 
@@ -60,8 +64,8 @@ local   all             all                                     trust
 
 # IPv4 local connections:
 host    all             all             127.0.0.1/32            trust
-host    all             all             192.168.189.141/24      trust
-host    all             all             192.168.189.142/24      trust
+host    all             all             192.168.189.139/24      trust
+
 
 # IPv6 local connections:
 host    all             all             ::1/128                 trust
