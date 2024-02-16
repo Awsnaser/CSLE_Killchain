@@ -1,16 +1,27 @@
-export CSLE_HOME=/home/aws/clse/
+apt install build-essential
+apt install make
+apt install git
+apt install bzip2
+wget https://repo.anaconda.com/archive/Anaconda3-5.0.0-Linux-x86_64.sh
+chmod u+rwx Anaconda3-5.0.0-Linux-x86_64.sh
+./Anaconda3-5.0.0-Linux-x86_64.sh
+
+
+
+
+
+
+
 nano ~/.bashrc
-export CSLE_HOME=/home/aws/clse/
+
 source ~/.bashrc
 
-sudo apt install -y make git bzip2
-wget https://repo.anaconda.com/archive/Anaconda3-5.0.0-Linux-x86_64.sh
-chmod u+x Anaconda3-5.0.0-Linux-x86_64.sh
-./Anaconda3-5.0.0-Linux-x86_64.sh
-source ~/.bashrc
+
+ 
 git clone https://github.com/Limmen/csle
-conda create -n csle python=3.9
-conda activate csle
+conda create -n py39 python=3.9
+conda activate py39 # alternatively, "source activate py39" for old versions of conda 
+ 
 
 
 
