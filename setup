@@ -64,6 +64,20 @@ sudo chown -R aws /var/log/postgresql
 sudo chmod 755 /run/postgresql/
 
 
+-------------in case not works 
+
+# For the logfile directory
+sudo chmod 777 /var/log/postgresql
+sudo chown postgres:postgres /var/log/postgresql
+
+# For the PID file directory
+sudo chmod 777 /run/postgresql
+sudo chown postgres:postgres /run/postgresql
+
+-------------------
+
+
+
 
 
 sudo -u postgres psql  # start psql session
