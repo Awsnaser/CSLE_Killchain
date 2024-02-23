@@ -17,7 +17,6 @@ chmod u+rwx Anaconda3-2022.10-Linux-x86_64.sh
 
 
 
-
 nano ~/.bashrc
 
  
@@ -137,6 +136,10 @@ cd metastore; make tables
 conda create -n py39 python=3.9
 source activate python39
 pip install csle-base csle-collector csle-ryu csle-common csle-attacker csle-defender csle-system-identification gym-csle-stopping-game csle-agents csle-rest-api csle-cli csle-cluster gym-csle-intrusion-response-game csle-tolerance gym-csle-apt-game gym-csle-cyborg
+
+
+----------- in case not working 
+##conda install libffi==3.3
 
 
 
