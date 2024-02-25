@@ -1,3 +1,11 @@
+
+
+export CSLE_HOME=/home/aws/csle
+export PATH=/home/aws/csle/management-system/prometheus/:$PATH
+export PATH=/home/aws/csle/management-system/node-exporter/:$PATH
+
+
+
 apt install build-essential
 apt install make
 apt install git
@@ -293,30 +301,6 @@ server {
 sudo service nginx restart
 
 
-Open the file on each worker and replace the current configuration with the following (replace leader-ip with the actual ip):
-
-server {
-        listen 80 default_server;
-        listen [::]:80 default_server;
-        root /var/www/html;
-        index index.html index.htm index.nginx-debian.html;
-        server_name _;
-        location /pgadmin {
-                proxy_set_header X-Script-Name /pgadmin;
-                proxy_set_header Host $host;
-                proxy_pass http://leader-ip:7778/;
-                proxy_redirect off;
-        }
-
-        location / {
-                proxy_pass http://leader-ip:7777/;
-                proxy_buffering off;
-                proxy_set_header X-Real-IP $remote_addr;
-                proxy_set_header X-Forwarded-Host $host;
-                proxy_set_header X-Forwarded-Port $server_port;
-        }
-}
-Listing 81: Content of `/etc/nginx/sites-available/default` on a worker.
 
 Next make the Nginx log files readable by your user by running the commands:
 
@@ -350,14 +334,6 @@ Next, configure the port of the web interface on the leader by editing the file:
       /components/Common/serverPort.js
 
 
-
-nano ~/.bashrc
-
-export PATH=/home/aws/csle/management-system/csle-mgmt-webapp/src/components/Common:$PATH
-
-
-
-source ~/.bashrc
 
 
 
