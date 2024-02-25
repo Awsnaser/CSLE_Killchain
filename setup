@@ -21,7 +21,7 @@ chmod u+rwx Anaconda3-5.0.0-Linux-x86_64.sh
 nano ~/.bashrc
 
  
-
+git clone https://github.com/Limmen/csle
 
  
  
