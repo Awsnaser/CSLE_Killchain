@@ -1,0 +1,18 @@
+Open the terminal on your Linux system.
+You will need to edit the /etc/apt/sources.list file or add a new file in the /etc/apt/sources.list.d/ directory. It's generally recommended to add a new file for repository additions to keep customizations separate from the main sources.list file. You can use any text editor you prefer, such as nano or vim. Here, I'll use nano for simplicity:
+bash
+Copy code
+sudo nano /etc/apt/sources.list.d/postgresql.list
+In the editor, add the following line:
+bash
+Copy code
+deb https://apt-archive.postgresql.org/pub/repos/apt/ bionic-pgdg main
+This line specifies the repository to use for PostgreSQL packages.
+
+Save the file and exit the text editor. If you're using nano, you can do this by pressing CTRL + O, hitting Enter, and then CTRL + X to exit.
+
+After adding the repository, update the package lists to include the new repository's packages:
+
+bash
+Copy code
+sudo apt-get update
