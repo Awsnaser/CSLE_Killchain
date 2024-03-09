@@ -132,6 +132,7 @@ Next, edit the file csle/metastore/create_cluster.sql and configure IP addresses
 cd metastore; make cluster
 cd metastore; make tables
 
+sudo apt-get -y install cadvisor
 
 
 
