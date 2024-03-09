@@ -18,7 +18,7 @@ chmod u+rwx Anaconda3-5.0.0-Linux-x86_64.sh
 
 
 
-nano ~/.bashrc
+ 
 
  
 git clone https://github.com/Limmen/csle
@@ -123,6 +123,7 @@ listen_addresses = 'localhost,*'
 
 
 
+nano csle/simulation-system/libs/csle-common/src/csle_common/constants/constants.py
 
 
 
