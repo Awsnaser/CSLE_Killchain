@@ -6,10 +6,13 @@ export PATH=/home/aws/csle/management-system/node-exporter/:$PATH
 
 
 
-apt install build-essential
-apt install make
-apt install git
-apt install bzip2
+ sudo apt install build-essential make git bzip2
+
+
+
+
+
+
 
 
 wget https://repo.anaconda.com/archive/Anaconda3-5.0.0-Linux-x86_64.sh
@@ -56,8 +59,6 @@ sudo apt-get -y install postgresql-15-citus-11.2
 sudo pg_conftool 15 main set shared_preload_libraries citus
 sudo pg_conftool 15 main set listen_addresses '*'
 
-sudo chmod 644 /var/log/postgresql/postgresql-15-main.log
-sudo chown postgres:postgres /var/log/postgresql/postgresql-15-main.log
 
 sudo service postgresql restart
 sudo update-rc.d postgresql enable
@@ -96,7 +97,7 @@ pip install torch numpy gym docker paramiko stable-baselines3 psycopg2 pyglet fl
 
 
 pg_hba conf. 
-local   all             postgres                             trust
+local   all             postgres                               trust
 
 # TYPE  DATABASE        USER            ADDRESS                 METHOD
 
